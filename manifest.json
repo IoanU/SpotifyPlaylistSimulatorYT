@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Spotify ➜ YT Player",
+  "version": "0.3.2",
+  "description": "Play Spotify playlists automatically in YouTube Music, with PKCE, autoplay, skip/prev and shuffle",
+  "permissions": [
+    "tabs",
+    "storage",
+    "commands",
+    "identity",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://accounts.spotify.com/*",
+    "https://api.spotify.com/*",
+    "https://api.song.link/*",
+    "https://music.youtube.com/*",
+    "https://www.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://music.youtube.com/search*"],
+      "js": ["autoplay.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "skip-track": {
+      "suggested_key": { "default": "Alt+Shift+Right" },
+      "description": "Skip current track"
+    },
+    "previous-track": {
+      "suggested_key": { "default": "Alt+Shift+Left" },
+      "description": "Previous track"
+    }
+  }
+}

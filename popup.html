@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spotify → YouTube</title>
+  <style>
+    body { font-family: sans-serif; width: 320px; padding: 12px; }
+    #spLink {
+      width: 100%; height: 36px; font-size: 14px;
+      box-sizing: border-box; padding: 6px 8px;
+    }
+    #shuffleLabel {
+      display: flex; align-items: center; margin-top: 8px;
+      font-size: 14px;
+    }
+    #startBtn {
+      width: 100%; height: 36px; margin-top: 8px;
+      font-size: 14px; cursor: pointer;
+    }
+    #status { margin-top: 8px; font-size: 0.9em; color: green; }
+  </style>
+</head>
+<body>
+  <input id="spLink" type="text" placeholder="https://open.spotify.com/playlist/…" />
+
+  <label id="shuffleLabel">
+    <input type="checkbox" id="shuffleToggle" />
+    <span style="margin-left:6px;">Shuffle playlist</span>
+  </label>
+
+  <button id="startBtn">Start</button>
+  <p id="status"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
