@@ -1,0 +1,3 @@
+- upload to https://chromewebstore.google.com/category/extensions
+- get the global URL corresponding to the uploaded extension
+- add said URL on the Spotify Developer page of the project
