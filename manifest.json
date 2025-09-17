@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Spotify ➜ YT Player",
+  "name": "Spotify to YT Player",
   "version": "0.3.2",
   "description": "Play Spotify playlists automatically in YouTube Music, with PKCE, autoplay, skip/prev and shuffle",
   "permissions": [
